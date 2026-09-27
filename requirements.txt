@@ -1,0 +1,11 @@
+ollama
+faster-whisper
+sounddevice
+numpy
+pyttsx3
+ddgs
+pyautogui
+playwright
+yt-dlp
+fastapi
+uvicorn

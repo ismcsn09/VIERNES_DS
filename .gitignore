@@ -1,0 +1,18 @@
+# Entorno virtual (se recrea en cada máquina)
+.venv/
+venv/
+env/
+
+# Cache de Python
+__pycache__/
+*.pyc
+
+# Sesión de Outlook guardada en el navegador — CONTIENE TU LOGIN.
+# Nunca la subas a un repositorio, ni siquiera privado.
+outlook_browser_profile/
+
+# Cache de token de la versión Azure/Graph (si algún día la usas)
+token_cache.json
+
+# Por si en el futuro agregas alguna clave/config local
+.env
