@@ -88,6 +88,30 @@ confirmación intermedia antes de ejecutar. Recomendaciones:
   herramientas específicas, borra `ejecutar_comando` de
   `DESKTOP_TOOLS_SCHEMA` y `DESKTOP_TOOL_FUNCTIONS` en `desktop.py`.
 
+## Configurar acceso a Moodle (una sola vez)
+
+Mismo patrón que Outlook: sesión de navegador guardada, sin API ni claves.
+
+```bash
+python moodle_web.py
+```
+
+Se abre un Chrome real en `https://domingosavio.esemtia.net/moodle/my/`.
+Inicia sesión con tu usuario y contraseña, y cuando veas tu panel, vuelve
+a la terminal y presiona Enter. Desde ahí, pídele a Viernes "revisa mis
+tareas de Moodle".
+
+Si en algún momento el mensaje dice que la sesión "venció", solo hay que
+repetir `python moodle_web.py` para renovarla (las sesiones web caducan
+después de un tiempo, es normal).
+
+Como cada Moodle se ve distinto según la institución, la detección busca
+enlaces a actividades por su URL (`/mod/assign/`, `/mod/quiz/`, etc.) en
+vez de depender del diseño visual — es más robusto, pero si tu panel está
+armado muy distinto y no encuentra nada, dime qué ves tú en la página
+(¿tiene una sección de "línea de tiempo" o "próximas actividades"?) y
+ajustamos el selector juntos.
+
 ## Cómo agregar nuevas capacidades
 
 Todo lo que Jarvis "puede hacer" vive en `tools.py`. Para agregar una
